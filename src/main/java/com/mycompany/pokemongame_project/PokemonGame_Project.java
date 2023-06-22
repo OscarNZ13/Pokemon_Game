@@ -11,5 +11,6 @@ public class PokemonGame_Project {
         Pokemon P3 = new Pokemon("Charizard", 150, 75, 60, PokemonType.Fire, PokemonType.Fire, PokemonType.Water);
       
         System.out.println(P1.getType());
+        
     }
 }
