@@ -4,9 +4,9 @@ public class PokemonGame_Project {
 
     public static void main(String[] args) {
 
-        Snorlax_N P1 = new Snorlax_N(AllPokemons.Snorlax, 160, 70, 60, PokemonType.Normal, PokemonType.Water, PokemonType.Fire);
-        
+        Snorlax_N P1 = new Snorlax_N(AllPokemons.Snorlax, 160, 70, 60, 70, 50, PokemonType.Fire, PokemonType.Normal, PokemonType.Fire);
+        Chandelure_F P2 = new Chandelure_F(AllPokemons.Chandelure, 150, 60, 50, 75, 60, PokemonType.Fire, PokemonType.Normal, PokemonType.Fire);
         System.out.println(P1);
-
+        System.out.println(P2);
     }
 }
