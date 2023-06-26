@@ -1,6 +1,6 @@
 package com.mycompany.pokemongame_project;
 
-public class Pokemon implements IPokemon_Actions {
+public abstract class Pokemon{
 
     private AllPokemons Name;
     private int HP, Attack, Defense;
@@ -14,17 +14,6 @@ public class Pokemon implements IPokemon_Actions {
         this.Type = Type;
         this.Strong = Strong;
         this.Weak = Weak;
-    }
-
-    //Interface Methods:
-    @Override
-    public void SpecialAttack() {
-        //Will be create the Special attack here
-    }
-
-    @Override
-    public void SpecialDefense() {
-        //Will be create the Special defense here
     }
 
     public AllPokemons getName() {
