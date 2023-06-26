@@ -1,20 +1,19 @@
 package com.mycompany.pokemongame_project;
 
-public class Pokemon implements IPokemon_Attacks {
+public class Pokemon implements IPokemon_Actions {
 
-    private String Name;
+    private AllPokemons Name;
     private int HP, Attack, Defense;
     private PokemonType Type, Strong, Weak;
 
-    public Pokemon(String name, int hP, int attack, int defense, PokemonType type, PokemonType strong,
-            PokemonType weak) {
-        Name = name;
-        HP = hP;
-        Attack = attack;
-        Defense = defense;
-        Type = type;
-        Strong = strong;
-        Weak = weak;
+    public Pokemon(AllPokemons Name, int HP, int Attack, int Defense, PokemonType Type, PokemonType Strong, PokemonType Weak) {
+        this.Name = Name;
+        this.HP = HP;
+        this.Attack = Attack;
+        this.Defense = Defense;
+        this.Type = Type;
+        this.Strong = Strong;
+        this.Weak = Weak;
     }
 
     //Interface Methods:
@@ -28,12 +27,12 @@ public class Pokemon implements IPokemon_Attacks {
         //Will be create the Special defense here
     }
 
-    public String getName() {
+    public AllPokemons getName() {
         return Name;
     }
 
-    public void setName(String name) {
-        Name = name;
+    public void setName(AllPokemons Name) {
+        this.Name = Name;
     }
 
     public int getHP() {
@@ -84,4 +83,8 @@ public class Pokemon implements IPokemon_Attacks {
         Weak = weak;
     }
 
+    @Override
+    public String toString() {
+        return "|Pokemon: "+ Name + " - HP: " + HP + " - Attack: " + Attack + " - Defense: " + Defense + " - Type: " + Type + " - Strong: " + Strong + " - Weak: " + Weak;
+    }
 }
