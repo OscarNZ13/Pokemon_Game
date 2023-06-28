@@ -1,87 +1,97 @@
 package com.mycompany.pokemongame_project;
 
-public class Pokemon implements IPokemon_Attacks {
+public abstract class Pokemon{
 
-    private String Name;
-    private int HP, Attack, Defense;
+    private AllPokemons Name;
+    private int HP, Attack, Defense, SpecialAttack, SpecialDefense;
     private PokemonType Type, Strong, Weak;
 
-    public Pokemon(String name, int hP, int attack, int defense, PokemonType type, PokemonType strong,
-            PokemonType weak) {
-        Name = name;
-        HP = hP;
-        Attack = attack;
-        Defense = defense;
-        Type = type;
-        Strong = strong;
-        Weak = weak;
+    public Pokemon(AllPokemons Name, int HP, int Attack, int Defense, int SpecialAttack, int SpecialDefense, PokemonType Type, PokemonType Strong, PokemonType Weak) {
+        this.Name = Name;
+        this.HP = HP;
+        this.Attack = Attack;
+        this.Defense = Defense;
+        this.SpecialAttack = SpecialAttack;
+        this.SpecialDefense = SpecialDefense;
+        this.Type = Type;
+        this.Strong = Strong;
+        this.Weak = Weak;
     }
 
-    //Interface Methods:
-    @Override
-    public void SpecialAttack() {
-        //Will be create the Special attack here
-    }
-
-    @Override
-    public void SpecialDefense() {
-        //Will be create the Special defense here
-    }
-
-    public String getName() {
+    public AllPokemons getName() {
         return Name;
     }
 
-    public void setName(String name) {
-        Name = name;
+    public void setName(AllPokemons Name) {
+        this.Name = Name;
     }
 
     public int getHP() {
         return HP;
     }
 
-    public void setHP(int hP) {
-        HP = hP;
+    public void setHP(int HP) {
+        this.HP = HP;
     }
 
     public int getAttack() {
         return Attack;
     }
 
-    public void setAttack(int attack) {
-        Attack = attack;
+    public void setAttack(int Attack) {
+        this.Attack = Attack;
     }
 
     public int getDefense() {
         return Defense;
     }
 
-    public void setDefense(int defense) {
-        Defense = defense;
+    public void setDefense(int Defense) {
+        this.Defense = Defense;
+    }
+
+    public int getSpecialAttack() {
+        return SpecialAttack;
+    }
+
+    public void setSpecialAttack(int SpecialAttack) {
+        this.SpecialAttack = SpecialAttack;
+    }
+
+    public int getSpecialDefense() {
+        return SpecialDefense;
+    }
+
+    public void setSpecialDefense(int SpecialDefense) {
+        this.SpecialDefense = SpecialDefense;
     }
 
     public PokemonType getType() {
         return Type;
     }
 
-    public void setType(PokemonType type) {
-        Type = type;
+    public void setType(PokemonType Type) {
+        this.Type = Type;
     }
 
     public PokemonType getStrong() {
         return Strong;
     }
 
-    public void setStrong(PokemonType strong) {
-        Strong = strong;
+    public void setStrong(PokemonType Strong) {
+        this.Strong = Strong;
     }
 
     public PokemonType getWeak() {
         return Weak;
     }
 
-    public void setWeak(PokemonType weak) {
-        Weak = weak;
+    public void setWeak(PokemonType Weak) {
+        this.Weak = Weak;
     }
 
+    @Override
+    public String toString() {
+        return "|Pokemon: "+ Name + " - HP: " + HP + " - Attack: " + Attack + " - Defense: " + Defense + " - Type: " + Type + " - Strong: " + Strong + " - Weak: " + Weak;
+    }
 }
