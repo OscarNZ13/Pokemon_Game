@@ -12,5 +12,6 @@ public class PokemonGame_Project {
         Chandelure_F P2 = new Chandelure_F(AllPokemons.Chandelure, 150, 60, 50, 75, 60, PokemonType.Fire, PokemonType.Normal, PokemonType.Fire);
         System.out.println(P1);
         System.out.println(P2);
+        //Prueba de branch
     }
 }
