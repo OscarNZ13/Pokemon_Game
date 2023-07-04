@@ -8,9 +8,11 @@ public class Charizard_F extends Pokemon implements IPokemon_Actions{
 
     @Override
     public void Attack(Pokemon p) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        int damage = getAttack()-p.getDefense(); //restar el atque a la defense del pokemon
+        int rest = p.getHP()-damage;
+        System.out.println("Tu oponente" + getName() + "ha atacado a tu Pokemon"+p.getName()+"con un daño de" +damage );
     }
-
+    
     @Override
     public void Defense(Pokemon p) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
@@ -18,7 +20,6 @@ public class Charizard_F extends Pokemon implements IPokemon_Actions{
 
     @Override
     public void SpecialAttack(Pokemon p) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
