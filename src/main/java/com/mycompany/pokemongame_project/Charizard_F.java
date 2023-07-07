@@ -10,6 +10,7 @@ public class Charizard_F extends Pokemon implements IPokemon_Actions {
     public void Attack(Pokemon p) {
         int damage = getAttack() - p.getDefense(); //restar el atque a la defense del pokemon
         int rest = p.getHP() - damage;
+        p.setHP(rest);
         System.out.println("Tu oponente" + getName() + "ha atacado a tu Pokemon" + p.getName() + "con un daño de" + damage);
     }
 
