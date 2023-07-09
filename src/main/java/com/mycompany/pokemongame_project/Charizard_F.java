@@ -19,7 +19,7 @@ public class Charizard_F extends Pokemon implements IPokemon_Actions {
         int demage = p.getAttack() - getDefense();
         int rest = getHP() - demage;
         setHP(rest);
-        System.out.println("Tu Pokemon" + getName() + "ha atacado al oponente" + p.getName() + "con un daño de" + rest);
+        System.out.println("Tu Pokemon" + getName() + "ha sido atacado por el Pokemon" + p.getName() + "con un daño de" + rest);
 
     }
 
@@ -28,7 +28,6 @@ public class Charizard_F extends Pokemon implements IPokemon_Actions {
         int damage = getSpecialAttack() - p.getSpecialDefense(); //restar el atque a la defense del pokemon
         int rest = p.getHP() - damage;
         p.setHP(rest);
-
         System.out.println("Tu oponente" + getName() + "ha atacado a tu Pokemon con un ataque Especial" + p.getName() + "con un daño de" + damage);
     }
 
@@ -37,7 +36,7 @@ public class Charizard_F extends Pokemon implements IPokemon_Actions {
         int demage = p.getSpecialDefense() - getSpecialDefense();
         int rest = p.getHP() - demage;
         setHP(rest);
-        System.out.println("Tu Pokemon" + getName() + "ha utilizado una defense especial contra el oponente" + p.getName() + "con un daño de" + rest);
+        System.out.println("Tu Pokemon" + getName() + "ha utilizado una defense especial contra el ataque de" + p.getName() + "con un daño de" + rest);
     }
 
 }
