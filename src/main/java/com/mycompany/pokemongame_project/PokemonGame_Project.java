@@ -3,14 +3,56 @@ package com.mycompany.pokemongame_project;
 public class PokemonGame_Project {
 
     public static void main(String[] args) {
-        
-        Menu menu = new Menu();
-        menu.setLocationRelativeTo(null);
-        menu.setVisible(true);
+        // Menu menu = new Menu();
+        // menu.setLocationRelativeTo(null);
+        // menu.setVisible(true);
 
         Snorlax_N P1 = new Snorlax_N(AllPokemons.Snorlax, 160, 70, 60, 70, 50, PokemonType.Fire, PokemonType.Normal, PokemonType.Fire);
         Chandelure_F P2 = new Chandelure_F(AllPokemons.Chandelure, 150, 60, 50, 75, 60, PokemonType.Fire, PokemonType.Normal, PokemonType.Fire);
-        System.out.println(P1);
-        System.out.println(P2);
+        Rattata_N P3 = new Rattata_N(AllPokemons.Rattata, 160, 70, 60, 70, 50, PokemonType.Fire, PokemonType.Normal, PokemonType.Fire);
+        //Prueba de branch
+        //Prueba de branch_Valeria
+        // Todos los objetos de los pokemones:
+        Snorlax_N snorlax = new Snorlax_N(AllPokemons.Snorlax,
+                150, 50, 35, 70, 60, PokemonType.Normal, PokemonType.Water, PokemonType.Fire);
+        Pidgeotto_N pidgeotto = new Pidgeotto_N(AllPokemons.Pidgeotto,
+                150, 50, 35, 70, 60, PokemonType.Normal, PokemonType.Water, PokemonType.Fire);
+        Rattata_N rattata = new Rattata_N(AllPokemons.Rattata,
+                150, 50, 35, 70, 60, PokemonType.Normal, PokemonType.Water, PokemonType.Fire);
+        Jigglypuff_N jigglypuff = new Jigglypuff_N(AllPokemons.Jigglypuff,
+                150, 50, 35, 70, 60, PokemonType.Normal, PokemonType.Water, PokemonType.Fire);
+
+        Charizard_F charizard = new Charizard_F(AllPokemons.Charizard,
+                115, 70, 45, 80, 60, PokemonType.Fire, PokemonType.Normal, PokemonType.Water);
+        Magmortar_F magmortar = new Magmortar_F(AllPokemons.Magmortar,
+                115, 70, 45, 80, 60, PokemonType.Fire, PokemonType.Normal, PokemonType.Water);
+        Chandelure_F chandelure = new Chandelure_F(AllPokemons.Chandelure,
+                115, 70, 45, 80, 60, PokemonType.Fire, PokemonType.Normal, PokemonType.Water);
+        Darmanitan_F darmanitan = new Darmanitan_F(AllPokemons.Darmanitan,
+                115, 70, 45, 80, 60, PokemonType.Fire, PokemonType.Normal, PokemonType.Water);
+
+        Gyarados_A gyarados = new Gyarados_A(AllPokemons.Gyarados,
+                190, 55, 45, 75, 65, PokemonType.Water, PokemonType.Fire, PokemonType.Normal);
+        Vaporeon_A vaporeon = new Vaporeon_A(AllPokemons.Vaporeon,
+                190, 55, 45, 75, 65, PokemonType.Water, PokemonType.Fire, PokemonType.Normal);
+        Gastrodon_A gastrodon = new Gastrodon_A(AllPokemons.Gastrodon,
+                190, 55, 45, 75, 65, PokemonType.Water, PokemonType.Fire, PokemonType.Normal);
+        Milotic_A milotic = new Milotic_A(AllPokemons.Milotic,
+                190, 55, 45, 75, 65, PokemonType.Water, PokemonType.Fire, PokemonType.Normal);
+
+        // Jugadores:
+        Player Player1 = new Player();
+        Player1.setName("Oscar13");
+        Player1.insert_Pokemon(snorlax);
+        Player1.insert_Pokemon(charizard);
+        Player1.insert_Pokemon(gyarados);
+        Player1.insert_Pokemon(vaporeon);
+
+        CPU_Player CPUP = new CPU_Player();
+        CPUP.insert_Pokemon(pidgeotto);
+        CPUP.insert_Pokemon(magmortar);
+        CPUP.insert_Pokemon(gastrodon);
+        CPUP.insert_Pokemon(milotic);
+//3018df256d02f1f01c26711d37d12fbb3daf1f87
     }
 }
