@@ -1,33 +1,38 @@
 package com.mycompany.pokemongame_project;
 
 public class Player {
+
     private String name;
     Nodo cabeza;
 
     public void insert_Pokemon(Pokemon p) {
-        // Verificamos primero si el Pokémon ya existe en la lista
-        Nodo aux = cabeza;
-        while (aux != null) {
-            if (aux.getPokemon().equals(p)) {
-                // Si el Pokémon ya está en la lista, no se realiza la inserción por lo tanto se
-                // rompre el metodo
-                System.out.println("Ya existe " + aux.getPokemon().getName() + " pokemon en la pokedex");
-                return;
-            }
-            aux = aux.getNext();
-        }
-
-        // Si el Pokémon no existe en la lista, se realiza la inserción
-        Nodo newNode = new Nodo(p);
-
-        if (cabeza == null) {
-            cabeza = newNode;
-        } else {
-            aux = cabeza;
-            while (aux.getNext() != null) {
+        if (getSize() < 4) {
+            // Verificamos primero si el Pokémon ya existe en la lista
+            Nodo aux = cabeza;
+            while (aux != null) {
+                if (aux.getPokemon().equals(p)) {
+                    // Si el Pokémon ya está en la lista, no se realiza la inserción por lo tanto se
+                    // rompre el metodo
+                    System.out.println("Ya existe " + aux.getPokemon().getName() + " pokemon en la pokedex");
+                    return;
+                }
                 aux = aux.getNext();
             }
-            aux.setNext(newNode);
+
+            // Si el Pokémon no existe en la lista, se realiza la inserción
+            Nodo newNode = new Nodo(p);
+
+            if (cabeza == null) {
+                cabeza = newNode;
+            } else {
+                aux = cabeza;
+                while (aux.getNext() != null) {
+                    aux = aux.getNext();
+                }
+                aux.setNext(newNode);
+            }
+        } else {
+            System.out.println("|No es posible tener mas de 4 Pokemones en la pokedex");
         }
     }
 
@@ -77,10 +82,10 @@ public class Player {
 
     public String toString() {
         Nodo aux = cabeza;
-        String s = name + ": ";
+        String s = "--> Jugador: " + name + "\n";
 
         while (aux != null) {
-            s += aux + " » ";
+            s += aux + "\n";
             aux = aux.getNext();
         }
 
