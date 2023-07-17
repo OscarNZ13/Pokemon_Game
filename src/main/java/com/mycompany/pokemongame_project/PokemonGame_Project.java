@@ -7,11 +7,6 @@ public class PokemonGame_Project {
         // menu.setLocationRelativeTo(null);
         // menu.setVisible(true);
 
-        Snorlax_N P1 = new Snorlax_N(AllPokemons.Snorlax, 160, 70, 60, 70, 50, PokemonType.Fire, PokemonType.Normal, PokemonType.Fire);
-        Chandelure_F P2 = new Chandelure_F(AllPokemons.Chandelure, 150, 60, 50, 75, 60, PokemonType.Fire, PokemonType.Normal, PokemonType.Fire);
-        Rattata_N P3 = new Rattata_N(AllPokemons.Rattata, 160, 70, 60, 70, 50, PokemonType.Fire, PokemonType.Normal, PokemonType.Fire);
-        //Prueba de branch
-        //Prueba de branch_Valeria
         // Todos los objetos de los pokemones:
         Snorlax_N snorlax = new Snorlax_N(AllPokemons.Snorlax,
                 150, 50, 35, 70, 60, PokemonType.Normal, PokemonType.Water, PokemonType.Fire);
@@ -44,15 +39,16 @@ public class PokemonGame_Project {
         Player Player1 = new Player();
         Player1.setName("Oscar13");
         Player1.insert_Pokemon(snorlax);
-        Player1.insert_Pokemon(charizard);
+        Player1.insert_Pokemon(chandelure);
         Player1.insert_Pokemon(gyarados);
         Player1.insert_Pokemon(vaporeon);
+        System.out.println(Player1);
 
         CPU_Player CPUP = new CPU_Player();
-        CPUP.insert_Pokemon(pidgeotto);
-        CPUP.insert_Pokemon(magmortar);
-        CPUP.insert_Pokemon(gastrodon);
-        CPUP.insert_Pokemon(milotic);
-//3018df256d02f1f01c26711d37d12fbb3daf1f87
+        CPUP.insertRandomPokemons();
+        System.out.println(CPUP);
+
+        vaporeon.SpecialAttack(CPUP.selectActivePokemon());
+        System.out.println(CPUP);
     }
 }
