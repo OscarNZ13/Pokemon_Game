@@ -3,9 +3,9 @@ package com.mycompany.pokemongame_project;
 public class PokemonGame_Project {
 
     public static void main(String[] args) {
-        // Menu menu = new Menu();
-        // menu.setLocationRelativeTo(null);
-        // menu.setVisible(true);
+         Menu menu = new Menu();
+         menu.setLocationRelativeTo(null);
+         menu.setVisible(true);
 
         // Todos los objetos de los pokemones:
         Snorlax_N snorlax = new Snorlax_N(AllPokemons.Snorlax,
