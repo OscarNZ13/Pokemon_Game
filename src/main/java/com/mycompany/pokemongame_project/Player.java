@@ -5,6 +5,13 @@ public class Player {
     private String name;
     Nodo cabeza;
 
+    public Player(String name) {
+        this.name = name;
+    }
+
+    public Player() {
+    }
+    
     public void insert_Pokemon(Pokemon p) {
         if (getSize() < 4) {
             // Verificamos primero si el Pokémon ya existe en la lista

@@ -21,12 +21,12 @@ public class CPU_Player {
         Rattata_N rattata = new Rattata_N(AllPokemons.Rattata, 150, 50, 35, 70, 60, PokemonType.Normal, PokemonType.Water, PokemonType.Fire);
         Jigglypuff_N jigglypuff = new Jigglypuff_N(AllPokemons.Jigglypuff, 150, 50, 35, 70, 60, PokemonType.Normal, PokemonType.Water, PokemonType.Fire);
         Charizard_F charizard = new Charizard_F(AllPokemons.Charizard, 115, 70, 45, 80, 60, PokemonType.Fire, PokemonType.Normal, PokemonType.Water);
-        Magmortar_F magmortar = new Magmortar_F(AllPokemons.Magmortar, 115, 70, 45, 80, 60, PokemonType.Fire, PokemonType.Normal, PokemonType.Water);
-        Chandelure_F chandelure = new Chandelure_F(AllPokemons.Chandelure, 115, 70, 45, 80, 60, PokemonType.Fire, PokemonType.Normal, PokemonType.Water);
-        Darmanitan_F darmanitan = new Darmanitan_F(AllPokemons.Darmanitan, 115, 70, 45, 80, 60, PokemonType.Fire, PokemonType.Normal, PokemonType.Water);
+        Arcanine_F arcanine = new Arcanine_F(AllPokemons.Arcanine, 115, 70, 45, 80, 60, PokemonType.Fire, PokemonType.Normal, PokemonType.Water);
+        Blaziken_F blaziken = new Blaziken_F(AllPokemons.Blaziken, 115, 70, 45, 80, 60, PokemonType.Fire, PokemonType.Normal, PokemonType.Water);
+        Infernape_F infernape = new Infernape_F(AllPokemons.Infernape, 115, 70, 45, 80, 60, PokemonType.Fire, PokemonType.Normal, PokemonType.Water);
         Gyarados_A gyarados = new Gyarados_A(AllPokemons.Gyarados, 190, 55, 45, 75, 65, PokemonType.Water, PokemonType.Fire, PokemonType.Normal);
         Vaporeon_A vaporeon = new Vaporeon_A(AllPokemons.Vaporeon, 190, 55, 45, 75, 65, PokemonType.Water, PokemonType.Fire, PokemonType.Normal);
-        Gastrodon_A gastrodon = new Gastrodon_A(AllPokemons.Gastrodon, 190, 55, 45, 75, 65, PokemonType.Water, PokemonType.Fire, PokemonType.Normal);
+        Blastoise_A blastoise = new Blastoise_A(AllPokemons.Blastoise, 190, 55, 45, 75, 65, PokemonType.Water, PokemonType.Fire, PokemonType.Normal);
         Milotic_A milotic = new Milotic_A(AllPokemons.Milotic, 190, 55, 45, 75, 65, PokemonType.Water, PokemonType.Fire, PokemonType.Normal);
 
         Nodo cabeza = null;
@@ -58,13 +58,13 @@ public class CPU_Player {
                     selectedPokemon = charizard;
                     break;
                 case 5:
-                    selectedPokemon = magmortar;
+                    selectedPokemon = arcanine;
                     break;
                 case 6:
-                    selectedPokemon = chandelure;
+                    selectedPokemon = blaziken;
                     break;
                 case 7:
-                    selectedPokemon = darmanitan;
+                    selectedPokemon = infernape;
                     break;
                 case 8:
                     selectedPokemon = gyarados;
@@ -73,7 +73,7 @@ public class CPU_Player {
                     selectedPokemon = vaporeon;
                     break;
                 case 10:
-                    selectedPokemon = gastrodon;
+                    selectedPokemon = blastoise;
                     break;
                 case 11:
                     selectedPokemon = milotic;

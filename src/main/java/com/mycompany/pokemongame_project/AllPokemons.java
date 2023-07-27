@@ -5,8 +5,8 @@ public enum AllPokemons {
     Snorlax, Pidgeotto, Rattata, Jigglypuff,
     
     //De tipo fuego:
-    Charizard, Magmortar, Chandelure, Darmanitan,
+    Charizard, Arcanine, Blaziken, Infernape,
     
     //De tipo agua:
-    Gyarados, Vaporeon, Gastrodon, Milotic;
+    Gyarados, Vaporeon, Blastoise, Milotic;
 }

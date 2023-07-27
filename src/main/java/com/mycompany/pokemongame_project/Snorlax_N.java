@@ -83,4 +83,7 @@ public class Snorlax_N extends Pokemon {
         int rest = getHP() - damage;
         setHP(rest);
     }
+
+    
+    
 }
