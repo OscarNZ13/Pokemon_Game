@@ -1,11 +1,15 @@
 package com.mycompany.pokemongame_project;
 
 import java.util.Random;
+import javax.swing.JOptionPane;
 
 public class CPU_Player {
 
-    private String name = "Final Boss";
+    private String name = "CPU";
     private Nodo cabeza;
+
+    Player player;
+    Batalla batalla;
 
     public CPU_Player(String name) {
         this.name = name;
@@ -16,18 +20,32 @@ public class CPU_Player {
 
     public void insertRandomPokemons() {
         // Se declaran todos los Pokemones para luego poder ser asignados de manera aleatoria:
-        Snorlax_N snorlax = new Snorlax_N(AllPokemons.Snorlax, 150, 50, 35, 70, 60, PokemonType.Normal, PokemonType.Water, PokemonType.Fire);
-        Pidgeotto_N pidgeotto = new Pidgeotto_N(AllPokemons.Pidgeotto, 150, 50, 35, 70, 60, PokemonType.Normal, PokemonType.Water, PokemonType.Fire);
-        Rattata_N rattata = new Rattata_N(AllPokemons.Rattata, 150, 50, 35, 70, 60, PokemonType.Normal, PokemonType.Water, PokemonType.Fire);
-        Jigglypuff_N jigglypuff = new Jigglypuff_N(AllPokemons.Jigglypuff, 150, 50, 35, 70, 60, PokemonType.Normal, PokemonType.Water, PokemonType.Fire);
-        Charizard_F charizard = new Charizard_F(AllPokemons.Charizard, 115, 70, 45, 80, 60, PokemonType.Fire, PokemonType.Normal, PokemonType.Water);
-        Magmortar_F magmortar = new Magmortar_F(AllPokemons.Magmortar, 115, 70, 45, 80, 60, PokemonType.Fire, PokemonType.Normal, PokemonType.Water);
-        Chandelure_F chandelure = new Chandelure_F(AllPokemons.Chandelure, 115, 70, 45, 80, 60, PokemonType.Fire, PokemonType.Normal, PokemonType.Water);
-        Darmanitan_F darmanitan = new Darmanitan_F(AllPokemons.Darmanitan, 115, 70, 45, 80, 60, PokemonType.Fire, PokemonType.Normal, PokemonType.Water);
-        Gyarados_A gyarados = new Gyarados_A(AllPokemons.Gyarados, 190, 55, 45, 75, 65, PokemonType.Water, PokemonType.Fire, PokemonType.Normal);
-        Vaporeon_A vaporeon = new Vaporeon_A(AllPokemons.Vaporeon, 190, 55, 45, 75, 65, PokemonType.Water, PokemonType.Fire, PokemonType.Normal);
-        Gastrodon_A gastrodon = new Gastrodon_A(AllPokemons.Gastrodon, 190, 55, 45, 75, 65, PokemonType.Water, PokemonType.Fire, PokemonType.Normal);
-        Milotic_A milotic = new Milotic_A(AllPokemons.Milotic, 190, 55, 45, 75, 65, PokemonType.Water, PokemonType.Fire, PokemonType.Normal);
+        Snorlax_N snorlax = new Snorlax_N(AllPokemons.Snorlax,
+                150, 50, 35, 70, 60, PokemonType.Normal, PokemonType.Water, PokemonType.Fire);
+        Pidgeotto_N pidgeotto = new Pidgeotto_N(AllPokemons.Pidgeotto,
+                150, 50, 35, 70, 60, PokemonType.Normal, PokemonType.Water, PokemonType.Fire);
+        Rattata_N rattata = new Rattata_N(AllPokemons.Rattata,
+                150, 50, 35, 70, 60, PokemonType.Normal, PokemonType.Water, PokemonType.Fire);
+        Jigglypuff_N jigglypuff = new Jigglypuff_N(AllPokemons.Jigglypuff,
+                150, 50, 35, 70, 60, PokemonType.Normal, PokemonType.Water, PokemonType.Fire);
+
+        Charizard_F charizard = new Charizard_F(AllPokemons.Charizard,
+                115, 70, 45, 80, 60, PokemonType.Fire, PokemonType.Normal, PokemonType.Water);
+        Arcanine_F arcanine = new Arcanine_F(AllPokemons.Arcanine,
+                115, 70, 45, 80, 60, PokemonType.Fire, PokemonType.Normal, PokemonType.Water);
+        Blaziken_F blaziken = new Blaziken_F(AllPokemons.Blaziken,
+                115, 70, 45, 80, 60, PokemonType.Fire, PokemonType.Normal, PokemonType.Water);
+        Infernape_F infernape = new Infernape_F(AllPokemons.Infernape,
+                115, 70, 45, 80, 60, PokemonType.Fire, PokemonType.Normal, PokemonType.Water);
+
+        Gyarados_A gyarados = new Gyarados_A(AllPokemons.Gyarados,
+                190, 55, 45, 75, 65, PokemonType.Water, PokemonType.Fire, PokemonType.Normal);
+        Vaporeon_A vaporeon = new Vaporeon_A(AllPokemons.Vaporeon,
+                190, 55, 45, 75, 65, PokemonType.Water, PokemonType.Fire, PokemonType.Normal);
+        Blastoise_A blastoise = new Blastoise_A(AllPokemons.Blastoise,
+                190, 55, 45, 75, 65, PokemonType.Water, PokemonType.Fire, PokemonType.Normal);
+        Milotic_A milotic = new Milotic_A(AllPokemons.Milotic,
+                190, 55, 45, 75, 65, PokemonType.Water, PokemonType.Fire, PokemonType.Normal);
 
         Nodo cabeza = null;
         Random random = new Random();
@@ -58,13 +76,13 @@ public class CPU_Player {
                     selectedPokemon = charizard;
                     break;
                 case 5:
-                    selectedPokemon = magmortar;
+                    selectedPokemon = arcanine;
                     break;
                 case 6:
-                    selectedPokemon = chandelure;
+                    selectedPokemon = blaziken;
                     break;
                 case 7:
-                    selectedPokemon = darmanitan;
+                    selectedPokemon = infernape;
                     break;
                 case 8:
                     selectedPokemon = gyarados;
@@ -73,7 +91,7 @@ public class CPU_Player {
                     selectedPokemon = vaporeon;
                     break;
                 case 10:
-                    selectedPokemon = gastrodon;
+                    selectedPokemon = blastoise;
                     break;
                 case 11:
                     selectedPokemon = milotic;
@@ -127,14 +145,22 @@ public class CPU_Player {
 
     public void removeFirstPokemon() {
         if (cabeza == null) {
-            // La lista está vacía, no hay nada que eliminar
-            return;
+  
+            JOptionPane.showMessageDialog(null,  " Eres el Ganador");
+            
+        
         }
-    
+
         cabeza = cabeza.getNext();
     }
-    
+
     public Pokemon selectActivePokemon() {
+
+        if (cabeza.getNext() == null) {
+ 
+            JOptionPane.showMessageDialog(null,  "A CPU solo le resta un Pokemon");
+       
+        }
         // Seleccionar un Pokémon activo al azar de la lista
         Random random = new Random();
         // Generamos un numero randon apartir del get_size que nos trae la cantidad de
