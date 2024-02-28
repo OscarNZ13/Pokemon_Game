@@ -3,6 +3,7 @@ package com.mycompany.pokemongame_project;
 public class Nodo {
     private Pokemon pokemon;
     private Nodo next;
+    private Nodo back;
 
     public Nodo(Pokemon pokemon) {
         this.pokemon = pokemon;
@@ -18,6 +19,16 @@ public class Nodo {
     public void setPokemon(Pokemon pokemon) {
         this.pokemon = pokemon;
     }
+
+    public Nodo getBack() {
+        return back;
+    }
+
+    public void setBack(Nodo back) {
+        this.back = back;
+    }
+
+
 
     public Nodo getNext() {
         return next;
